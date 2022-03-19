@@ -1,5 +1,5 @@
 # PRAKTIKUM-ALPRO
-Tugas Pra Praktikum Algoritma Pemrograman
+Tugas Pra-Praktikum Algoritma Pemrograman
 
 Anggota:
 + Dola Sri Rejeki - 2100018430
