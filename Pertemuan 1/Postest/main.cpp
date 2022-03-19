@@ -42,3 +42,22 @@ int main(){
 		goto menu;
 		else return 0;
         }
+        else if (pil == 3){
+            cout << "\nHasil perkalian dari "<<x<<" * "<<y<<" adalah : "<<x/y<<endl;
+            cout << "\nMasih lanjut [y/t]? ";
+		cin >> lagi;
+		if (lagi == 'y')
+		goto menu;
+		else return 0;
+        }
+    else if (pil == 4){
+            cout << "\nHasil perkalian dari "<<x<<" * "<<y<<" adalah : "<<x*y<<endl;
+            cout << "\nMasih lanjut [y/t]? ";
+		cin >> lagi;
+		if (lagi == 'y')
+		goto menu;
+		else return 0;
+        }
+    }
+    return 0;
+}
