@@ -36,3 +36,40 @@ void shop(){
 	
 	alltotal=alltotal+total;	
 	}
+	
+	cout<<"Total harga sebelum dipotong : "<<alltotal;
+		outfile<<"Total harga sebelum dipotong : "<<alltotal<<endl;
+		
+		
+	cout<<"\nJarak Rumah ke Rumah Makan? : ";cin>>jarak;
+
+    if(jarak<3){
+        int ongkir=15000;
+        if(alltotal>25000){
+        hrgakhir = alltotal+(ongkir-3000);
+    }else if(alltotal>50000){
+        hrgakhir = (alltotal+(ongkir-5000))-((15/100)*alltotal);
+    }else if (alltotal>150000){
+        hrgakhir = (alltotal+(ongkir-8000))-((35/100)*alltotal);
+    }
+    
+	cout<<"\Total harga setelah diberi diskon dan ongkir : "<<hrgakhir;
+		outfile<<"Total yang harus dibayarkan : "<<hrgakhir<<endl;
+    }
+	
+	else{
+        int ongkir=25000;
+        if(alltotal>25000 && alltotal<=50000){
+        hrgakhir = alltotal+(ongkir-3000);
+    }else if(alltotal>50000 && alltotal<=150000){
+        hrgakhir = (alltotal+(ongkir-5000))-((15/100)*alltotal);
+    }else if (alltotal>150000){
+        hrgakhir = (alltotal+(ongkir-8000))-((35/100)*alltotal);
+    }
+    
+	cout<<"\nTotal harga setelah diberi diskon dan ongkir : "<<hrgakhir;
+		outfile<<"Total yang harus dibayarkan : "<<hrgakhir<<endl;
+    }
+		
+   outfile.close();
+}
