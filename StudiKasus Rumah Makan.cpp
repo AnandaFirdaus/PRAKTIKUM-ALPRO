@@ -73,3 +73,34 @@ void shop(){
 		
    outfile.close();
 }
+
+void line(int n){
+	for(int i=0;i<=n;++i)
+	cout<<"=";cout<<"\n";
+}
+
+int main () {
+	int opt;
+	
+	line(20);
+	
+	cout<<"Barang yang dijual : "<<endl;
+	cout<<" 0. Ayam Geprek - 21000\n 1. Ayam Goreng - 17000\n 2. Udang Goreng - 19000\n 3. Cumi Goreng - 20000\n 4. Ayam Bakar - 25000"<<endl;
+   
+    line(20);
+   
+   cout<<"Menu: \n (1) Masukkan makanan yang ini dibeli\n (2) Keluar \n";
+   
+   line(20);
+   
+   cout << "Pilihanmu: ";cin>>opt;
+   
+   if(opt==1){
+   	shop();
+   }
+   else{
+   	cout<<"Done!";
+   }
+   
+   getch();
+}
