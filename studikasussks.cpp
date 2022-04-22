@@ -45,3 +45,44 @@ void studikasus::input()
         cin >> sks[i];
     }
 }
+
+void studikasus::proses()
+{
+    jumlahsks = 0;
+    bayar = 0;
+    hitung(sks, jumlahmk, jumlahsks);
+    bayar = jumlahsks * 150000;
+    diskon = bayar * 0.25;
+    totbay = bayar - diskon;
+}
+
+void studikasus::output()
+{
+    ofstream hasil;
+    hasil.open("hasil.txt", ios::out);
+    hasil << "\n=============================" << endl;
+    hasil << "Nama               : " << nama << endl;
+    hasil << "NIM                : " << nim << endl;
+    hasil << "Jumlah Mata Kuliah : " << jumlahmk << endl;
+    hasil << "-----------------------------" << endl;
+    for (int i = 0; i < jumlahmk; i++)
+    {
+        hasil << "Mata Kuliah    : " << matkul[i] << endl;
+        hasil << "Banyak SKS     : " << sks[i] << endl;
+    }
+    hasil << "-----------------------------" << endl;
+    hasil << "Jumlah SKS     : " << jumlahsks << endl;
+    hasil << "Total Harga    : Rp" << bayar << endl;
+    hasil << "Diskon         : Rp" << diskon << endl;
+    hasil << "Total Bayar    : Rp" << totbay << endl;
+    hasil << "=============================" << endl;
+    hasil.close();
+}
+
+int main()
+{
+    studikasus x; 
+    x.input(); 
+    x.proses();
+    x.output();
+}
